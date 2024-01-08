@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiburonbasilon</title>
+
+    <script href="bootstrap-5.3.2-dist\js\bootstrap.min.js"></script>
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/Actividades.css">
+    <script src="javascript/actividades.js"></script>
+    <script src="javascript\cesta.js"></script>
+   
+</head>
+<body>
+
+    
+    <header>
+        <img class="logo" src="img\_161d68fe-bc48-45f2-a254-604a1336ea4b.png" alt="Logo 1">
+        <nav>
+            <a href="Inicio.html">Inicio</a>
+            <a href="Actividades.html">Actividades</a>
+            <a href="productos.html">Productos</a>
+            <a href="Iniciosesion.html">Iniciar Sesión</a>
+        </nav>
+        <nav>
+            <a href="cesta.html"><img class="logo" src="img\imagen_2023-12-15_105351555.png" alt="Logo 2"></a>
+        </nav>
+    </header>
+
+    <div class="mt-3">
+        <label for="ordenar">Ordenar por:</label>
+        <select id="ordenar" class="form-select" onchange="ordenarProductos()">
+            <option value="asc">Precio ascendente</option>
+            <option value="desc">Precio descendente</option>
+        </select>
+    
+        <button class="btn btn-primary" onclick="filtrarPorPrecio(0, 500)">Precio < $500</button>
+        <button class="btn btn-primary" onclick="filtrarPorPrecio(500, 1000)">Precio $500-$1000</button>
+        <button class="btn btn-primary" onclick="filtrarPorPrecio(1000, 2000)">Precio $1000-$2000</button>
+        <button class="btn btn-primary" onclick="limpiarFiltros()">Limpiar Filtros</button>
+    </div>
+    
+    
+    <div class="container mt-5">
+        <div class="row">
+            
+            <div class="col-md-4 col-sm-12">
+                <div class="card">
+                    <img src="img\instrucciones-de-buceo-4.jpg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Bautizo</h5>
+                      
+                        <p class="card-text">Precio:100€</p>
+                        <button class="btn btn-primary" onclick="mostrarDetalle(10)">Ver Detalle</button>
+                        <button class="btn btn-success" onclick="agregarACesta(10,'Bautizo',100)">Añadir a la Cesta</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="card">
+                    <img src="img\i0_wp_com-tours-de-buceo-en-cenotes-tulum-y-arrecife-11.jpg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Exploracion con equipo incluido</h5>
+                        <p class="card-text">Precio: 60€</p>
+                        <button class="btn btn-primary" onclick="mostrarDetalle(11)">Ver Detalle</button>
+                        <button class="btn btn-success" onclick="agregarACesta(11,'Exploracion con equipo incluido',60)">Añadir a la Cesta</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="card">
+                    <img src="img\encrypted-tbn0_gstatic_com-images (1).jpg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Formaciones (desde450€) </h5>
+                        <p class="card-text">Precio: 450€</p>
+                        <button class="btn btn-primary" onclick="mostrarDetalle(12)">Ver Detalle</button>
+                        <button class="btn btn-success" onclick="agregarACesta(12,'Formaciones',450)">Añadir a la Cesta</button>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <div class="row mb-4 col-sm-12"></div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img\comprar-equipo-de-buceo-barato (1).jpg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Alquiler de material</h5>
+                      
+                        <p class="card-text">Precio:20€</p>
+                        <button class="btn btn-primary" onclick="mostrarDetalle(13)">Ver Detalle</button>
+                        <button class="btn btn-success" onclick="agregarACesta(13,'Alquiler de material',20)">Añadir a la Cesta</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="card">
+                    <img src="img\69a2617bbuceo_maldivas_1000x666.jpg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Pack 10 inmersiones</h5>
+                        <p class="card-text">Precio: 575€</p>
+                        <button class="btn btn-primary" onclick="mostrarDetalle(14)">Ver Detalle</button>
+                        <button class="btn btn-success" onclick="agregarACesta(14,'pack10',575)">Añadir a la Cesta</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="card">
+                    <img src="img\fotonoticia_20140427123334_1200.jpg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Inmersión sin equipo</h5>
+                        <p class="card-text">Precio: 40€</p>
+                        <button class="btn btn-primary" onclick="mostrarDetalle(15)">Ver Detalle</button>
+                        <button class="btn btn-success" onclick="agregarACesta(15,'Inmersiones sin equipo',40)">Añadir a la Cesta</button>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <div class="row mb-4 col-sm-12"></div>
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <div class="card">
+                    <img src="img\media_istockphoto_com-jurel-y-clavadista.jpg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Pack 20 inmersiones</h5>
+                        <p class="card-text">Precio: 1050€</p>
+                        <button class="btn btn-primary" onclick="mostrarDetalle(16)">Ver Detalle</button>
+                        <button class="btn btn-success" onclick="agregarACesta(16,'pack20',1050)">Añadir a la Cesta</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="card">
+                    <img src="img\yelodotred_s3-us-west-2_amazonaws_com-pintarroja-dive-center-primeros_auxilios.jpg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Rescue diver</h5>
+                        <p class="card-text">Precio: 350€</p>
+                        <button class="btn btn-primary" onclick="mostrarDetalle(17)">Ver Detalle</button>
+                        <button class="btn btn-success" onclick="agregarACesta(17,'rescue diver',350)">Añadir a la Cesta</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4  col-sm-12">
+                <div class="card">
+                    <img src="img\encrypted-tbn0_gstatic_com-images (2).jpg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Curso de apnea</h5>
+                        <p class="card-text">Precio: 160€</p>
+                        <button class="btn btn-primary" onclick="mostrarDetalle(18)">Ver Detalle</button>
+                        <button class="btn btn-success" onclick="agregarACesta(18,'curso de apnea',160)">Añadir a la Cesta</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-4 col-sm-12"></div>
+        <div class="row mb-4 col-sm-12"></div>
+        <div class="row mb-4 col-sm-12"></div>
+        
+        
+        
+    </div>
+    <footer>
+        <p>&copy; 2023 Tiburon Basilon . Todos los derechos reservados.</p>
+    </footer>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    
+    
+</body>
+
+</html>

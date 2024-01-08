@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiburonbasilon</title>
+
+   
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <script src="javascript\productos.js"></script>
+    <script src="javascript\cesta.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/productos.css">
+
+</head>
+<body>
+
+
+<header>
+    <img class="logo" src="img\_161d68fe-bc48-45f2-a254-604a1336ea4b.png" alt="Logo 1">
+    <nav>
+        <a href="Inicio.html">Inicio</a>
+        <a href="Actividades.html">Actividades</a>
+        <a href="productos.html">Productos</a>
+        <a href="Iniciosesion.html">Iniciar Sesión</a>
+    </nav>
+    <nav>
+        <a href="cesta.html"><img class="logo" src="img\imagen_2023-12-15_105351555.png" alt="Logo 2"></a>
+    </nav>
+</header>
+
+<div class="mt-3">
+    <label for="ordenar">Ordenar por:</label>
+    <select id="ordenar" class="form-select" onchange="ordenarProductos()">
+        <option value="asc">Precio ascendente</option>
+        <option value="desc">Precio descendente</option>
+    </select>
+
+    <button class="btn btn-primary" onclick="filtrarPorPrecio(0, 500)">Precio < $500</button>
+    <button class="btn btn-primary" onclick="filtrarPorPrecio(500, 1000)">Precio $500-$1000</button>
+    <button class="btn btn-primary" onclick="filtrarPorPrecio(1000, 2000)">Precio $1000-$2000</button>
+    <button class="btn btn-primary" onclick="limpiarFiltros()">Limpiar Filtros</button>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Producto 1 -->
+        <div class="col-md-4 col-sm-12">
+            <div class="card">
+                <img src="img\images (1).jpeg" class="card-img-top" alt="Producto 1">
+                <div class="card-body">
+                    <h5 class="card-title">Pack jacket regulador</h5>
+                  
+                    <p class="card-text">Precio:1500€</p>
+                    <button class="btn btn-primary" onclick="mostrarDetalle(1,)">Ver Detalle</button>
+                    <button class="btn btn-success" onclick="agregarACesta(1,'pack1',1500)">Añadir a la Cesta</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="card">
+                <img src="img\Suunto_Zoop_Novo.webp" class="card-img-top" alt="Producto 1">
+                <div class="card-body">
+                    <h5 class="card-title">Ordenador de buceo </h5>
+                    <p class="card-text">Precio: 250€</p>
+                    <button class="btn btn-primary" onclick="mostrarDetalle(2)">Ver Detalle</button>
+                    <button class="btn btn-success" onclick="agregarACesta(2,'Ordenador buceo',250)">Añadir a la Cesta</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="card">
+                <img src="img\encrypted-tbn0_gstatic_com-images.webp" class="card-img-top" alt="Producto 1">
+                <div class="card-body">
+                    <h5 class="card-title">Aletas</h5>
+                    <p class="card-text">Precio: 100€</p>
+                    <button class="btn btn-primary" onclick="mostrarDetalle(3)">Ver Detalle</button>
+                    <button class="btn btn-success" onclick="agregarACesta(3,'Aletas',100)">Añadir a la Cesta</button>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    <div class="row mb-4 col-sm-12"></div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="img\encrypted-tbn0_gstatic_com-images (1).webp" class="card-img-top" alt="Producto 1">
+                <div class="card-body">
+                    <h5 class="card-title">Mascara</h5>
+                  
+                    <p class="card-text">Precio:50€</p>
+                    <button class="btn btn-primary" onclick="mostrarDetalle(4)">Ver Detalle</button>
+                    <button class="btn btn-success" onclick="agregarACesta(4,'Mascara',50)">Añadir a la Cesta</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="card">
+                <img src="img\ordenadores-de-buceo-1.jpg" class="card-img-top" alt="Producto 1">
+                <div class="card-body">
+                    <h5 class="card-title">Ordenador de buceo </h5>
+                    <p class="card-text">Precio: 600€</p>
+                    <button class="btn btn-primary" onclick="mostrarDetalle(5)">Ver Detalle</button>
+                    <button class="btn btn-success" onclick="agregarACesta(5,'Ordenador de buceo2',600)">Añadir a la Cesta</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="card">
+                <img src="img\jacket-travelight-azul.jpg" class="card-img-top" alt="Producto 1">
+                <div class="card-body">
+                    <h5 class="card-title">Jacket</h5>
+                    <p class="card-text">Precio: 400€</p>
+                    <button class="btn btn-primary" onclick="mostrarDetalle(6)">Ver Detalle</button>
+                    <button class="btn btn-success" onclick="agregarACesta(6,'Jacket',400)">Añadir a la Cesta</button>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    <div class="row mb-4 col-sm-12"></div>
+    <div class="row">
+        <div class="col-md-4 col-sm-12">
+            <div class="card">
+                <img src="img\encrypted-tbn0_gstatic_com-images.jpg" class="card-img-top" alt="Producto 1">
+                <div class="card-body">
+                    <h5 class="card-title">Regulador</h5>
+                    <p class="card-text">Precio: 550€</p>
+                    <button class="btn btn-primary" onclick="mostrarDetalle(7)">Ver Detalle</button>
+                    <button class="btn btn-success" onclick="agregarACesta(7,'Regulador',550)">Añadir a la Cesta</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="card">
+                <img src="img\solafx-semidry-suit-man-87-mm-e1593196390330.jpg" class="card-img-top" alt="Producto 1">
+                <div class="card-body">
+                    <h5 class="card-title">Traje Neopreno</h5>
+                    <p class="card-text">Precio: 550€</p>
+                    <button class="btn btn-primary" onclick="mostrarDetalle(8)">Ver Detalle</button>
+                    <button class="btn btn-success" onclick="agregarACesta(8,'Traje neopreno',550)">Añadir a la Cesta</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4  col-sm-12">
+            <div class="card">
+                <img src="img\boya-balizamiento-superficie.jpg" class="card-img-top" alt="Producto 1">
+                <div class="card-body">
+                    <h5 class="card-title">Boya</h5>
+                    <p class="card-text">Precio: 55€</p>
+                    <button class="btn btn-primary" onclick="mostrarDetalle(9)">Ver Detalle</button>
+                    <button class="btn btn-success" onclick="agregarACesta(9,'Boya',55)">Añadir a la Cesta</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-4 col-sm-12"></div>
+    <div class="row mb-4 col-sm-12"></div>
+    <div class="row mb-4 col-sm-12"></div>
+        
+</div>
+<footer>
+    <p>&copy; 2023 Tiburon Basilon . Todos los derechos reservados.</p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

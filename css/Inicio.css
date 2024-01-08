@@ -1,0 +1,12 @@
+@media (min-width: 768px) {
+  #carouselExampleControls {
+      height: 60%;
+      margin: auto;
+      width: 50%; 
+  }
+}
+#carouselExampleControls {
+  height: 50%;
+  margin: auto;
+  width: 30%; 
+}

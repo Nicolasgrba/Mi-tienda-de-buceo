@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiburonbasilon</title>
+    <link rel="stylesheet" href="/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/inicio.css">
+</head>
+<body>
+  
+<header>
+    <img class="logo" src="img\_161d68fe-bc48-45f2-a254-604a1336ea4b.png" alt="Logo 1">
+    <nav>
+        <a href="Inicio.html">Inicio</a>
+        <a href="Actividades.html">Actividades</a>
+        <a href="productos.html">Productos</a>
+        <a href="Iniciosesion.html">Iniciar Sesión</a>
+    </nav>
+    <nav>
+        <a href="cesta.html"><img class="logo" src="img\imagen_2023-12-15_105351555.png" alt="Logo 2"></a>
+    </nav>
+</header>
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="img\bdb4b55d4d1a57ca063763da13ab0157ae9bcc6b.jpeg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="img\istockphoto-475982999-612x612.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="img\caabo-palos-scaled.jpg" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div class="row mb-4 col-sm-12"></div>
+<div class="row mb-4 col-sm-12"></div>
+
+<h2>Productos mas vendidos</h2>
+<div class="container mt-5">
+    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-4">
+                    
+                        <div class="card">
+                            <img src="img\images (1).jpeg" class="card-img-top" alt="Producto 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Producto 1</h5>
+                                <p class="card-text">Precio: 1500€</p>
+                                <button class="btn btn-primary" onclick="mostrarDetalle(1)">Ver Detalle</button>
+                                <button class="btn btn-success" onclick="agregarACesta(1)">Añadir a la Cesta</button>
+                            </div>
+                        </div>
+                    </div>
+          
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="img\Suunto_Zoop_Novo.webp" class="card-img-top" alt="Producto 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Ordenador de buceo</h5>
+                                <p class="card-text">Precio: 250€</p>
+                                <button class="btn btn-primary" onclick="mostrarDetalle(2)">Ver Detalle</button>
+                                <button class="btn btn-success" onclick="agregarACesta(2)">Añadir a la Cesta</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="img\encrypted-tbn0_gstatic_com-images.webp" class="card-img-top" alt="Producto 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Aletas</h5>
+                                <p class="card-text">Precio: 100€</p>
+                                <button class="btn btn-primary" onclick="mostrarDetalle(3)">Ver Detalle</button>
+                                <button class="btn btn-success" onclick="agregarACesta(3)">Añadir a la Cesta</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <!-- Producto 4 -->
+                    <div class="col-md-4">
+                      <div class="card">
+                          <img src="img\encrypted-tbn0_gstatic_com-images (1).webp" class="card-img-top" alt="Producto 1">
+                          <div class="card-body">
+                              <h5 class="card-title">Mascara</h5>
+                            
+                              <p class="card-text">Precio:50€</p>
+                              <button class="btn btn-primary" onclick="mostrarDetalle(4)">Ver Detalle</button>
+                              <button class="btn btn-success" onclick="agregarACesta(4)">Añadir a la Cesta</button>
+                          </div>
+                      </div>
+                  </div>
+
+                    
+                    <div class="col-md-4 col-sm-12">
+                      <div class="card">
+                          <img src="img\jacket-travelight-azul.jpg" class="card-img-top" alt="Producto 1">
+                          <div class="card-body">
+                              <h5 class="card-title">Jacket</h5>
+                              <p class="card-text">Precio: 400€</p>
+                              <button class="btn btn-primary" onclick="mostrarDetalle(6)">Ver Detalle</button>
+                              <button class="btn btn-success" onclick="agregarACesta(6)">Añadir a la Cesta</button>
+                          </div>
+                      </div>
+                  </div>
+          
+                      <div class="col-md-4  col-sm-12">
+                        <div class="card">
+                            <img src="img\boya-balizamiento-superficie.jpg" class="card-img-top" alt="Producto 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Boya</h5>
+                                <p class="card-text">Precio: 55€</p>
+                                <button class="btn btn-primary" onclick="mostrarDetalle(9)">Ver Detalle</button>
+                                <button class="btn btn-success" onclick="agregarACesta(9)">Añadir a la Cesta</button>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+          </div>
+
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+</div>
+<div class="row mb-4 col-sm-12"></div>
+<div class="row mb-4 col-sm-12"></div>
+<h2>Bucea con nosotros</h2>
+
+<div class="container mt-5">
+    <div id="activitiesCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card">
+                            <img src="img\encrypted-tbn0_gstatic_com-images (1).jpg" class="card-img-top" alt="Producto 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Formaciones (desde450€) </h5>
+                                <p class="card-text">Precio: 450€</p>
+                                <button class="btn btn-primary" onclick="mostrarDetalle(12)">Ver Detalle</button>
+                                <button class="btn btn-success" onclick="agregarACesta(12)">Añadir a la Cesta</button>
+                            </div>
+                        </div>
+                    </div>
+          
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card">
+                            <img src="img\69a2617bbuceo_maldivas_1000x666.jpg" class="card-img-top" alt="Producto 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Pack 10 inmersiones</h5>
+                                <p class="card-text">Precio: 575€</p>
+                                <button class="btn btn-primary" onclick="mostrarDetalle(14)">Ver Detalle</button>
+                                <button class="btn btn-success" onclick="agregarACesta(14)">Añadir a la Cesta</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col-md-4  col-sm-12">
+                        <div class="card">
+                            <img src="img\encrypted-tbn0_gstatic_com-images (2).jpg" class="card-img-top" alt="Producto 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Curso de apnea</h5>
+                                <p class="card-text">Precio: 160€</p>
+                                <button class="btn btn-primary" onclick="mostrarDetalle(18)">Ver Detalle</button>
+                                <button class="btn btn-success" onclick="agregarACesta(18)">Añadir a la Cesta</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="img\comprar-equipo-de-buceo-barato (1).jpg" class="card-img-top" alt="Producto 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Alquiler de material</h5>
+                              
+                                <p class="card-text">Precio:20€</p>
+                                <button class="btn btn-primary" onclick="mostrarDetalle(13)">Ver Detalle</button>
+                                <button class="btn btn-success" onclick="agregarACesta(13)">Añadir a la Cesta</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card">
+                            <img src="img\fotonoticia_20140427123334_1200.jpg" class="card-img-top" alt="Producto 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Inmersión sin equipo</h5>
+                                <p class="card-text">Precio: 40€</p>
+                                <button class="btn btn-primary" onclick="mostrarDetalle(15)">Ver Detalle</button>
+                                <button class="btn btn-success" onclick="agregarACesta(15)">Añadir a la Cesta</button>
+                            </div>
+                        </div>
+                    </div>
+          
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card">
+                            <img src="img\i0_wp_com-tours-de-buceo-en-cenotes-tulum-y-arrecife-11.jpg" class="card-img-top" alt="Producto 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Exploracion con equipo incluido</h5>
+                                <p class="card-text">Precio: 60€</p>
+                                <button class="btn btn-primary" onclick="mostrarDetalle(11)">Ver Detalle</button>
+                                <button class="btn btn-success" onclick="agregarACesta(11)">Añadir a la Cesta</button>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+          </div>
+
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#activitiesCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#activitiesCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+</div>
+<div class="row mb-4 col-sm-12"></div>
+<div class="row mb-4 col-sm-12"></div>
+<div class="row mb-4 col-sm-12"></div>
+<footer class="mt-5">
+  <p>&copy; 2023 Tu Tienda de Buceo. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
+
