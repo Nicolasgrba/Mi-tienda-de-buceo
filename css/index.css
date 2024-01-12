@@ -20,6 +20,12 @@
       max-width: 50px; 
       margin-right: 10px; 
   }
+
+  #tiburonv{
+    height: 150px;
+    width: 150px;
+  }
+
   nav {
       display: flex;
       justify-content: center;
