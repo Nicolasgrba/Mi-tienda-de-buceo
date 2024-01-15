@@ -40,17 +40,6 @@ $(document).ready(function () {
     });
 
 
-    function descargarArchivo(nombreArchivo, contenido) {
-        var blob = new Blob([contenido], { type: "application/json" });
-
-
-        var link = document.createElement("a");
-        link.href = URL.createObjectURL(blob);
-        link.download = nombreArchivo;
-
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    }
+    
 });
 
